@@ -4,7 +4,7 @@ import views
 # zappos/  
 #     +users(zappos/users)
 urlpatterns = [
-    url(r'^$', views.index)
+    url(r'^$', views.index),
     url(r'^users$', views.users_index),
     url(r'^users/create$', views.users_create)
 ]
