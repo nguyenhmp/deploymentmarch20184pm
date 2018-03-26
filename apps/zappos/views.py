@@ -4,6 +4,11 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from .models import User
 # Create your views here.
+def index(request):
+    context = {
+        "all_users":User.objects.all()
+    }
+    return render(request, "zappos/users/index.html", context)
 def users_index(request):
     context = {
         "all_users":User.objects.all()
